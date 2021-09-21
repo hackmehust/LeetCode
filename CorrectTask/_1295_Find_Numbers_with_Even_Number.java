@@ -1,7 +1,8 @@
-package Learn;
+package CorrectTask;
 
-public class Sample {
-    
+// https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+public class _1295_Find_Numbers_with_Even_Number {
     public static int findNumbers(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -18,5 +19,4 @@ public class Sample {
         System.out.println(findNumbers(nums1));
         System.out.println(findNumbers(nums2));
     }
-    
 }

@@ -1,34 +1,31 @@
 package CorrectTask;
 
-public class _88_Merger_Sorted_Array {
-    
-    public static void merge(int[] n1, int m, int[] n2, int n) {
-        int i = m - 1;
-        int j = n - 1;
-        int k = (m + n) - 1;
+// https://leetcode.com/problems/merge-sorted-array/
 
-        while(k>=0) {
-            if (j < 0) {
-                n1[k] = n1[i];
-                i--;
-            } else if (i < 0) {
-                n1[k] = n2[j];
-                j--;
-            } else if (n1[i] > n2[j]) {
-                n1[k] = n1[i];
-                i--;
-            } else if (n1[i] <= n2[j]) {
-                n1[k] = n2[j];
-                j--;
+public class _88_Merger_Sorted_Array {
+
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i=m-1;
+        int j=n-1;
+        int k=m+n-1;
+        while(i>=0 && j>=0){
+            if (nums1[i]<nums2[j]) {
+                nums1[k--]=nums2[j--];
+            } else {
+                nums1[k--]=nums1[i--];
             }
-        k--;
+        }
+        while (i>=0) {
+            nums1[k--]=nums1[i--];
+        }
+        while(j>=0) {
+            nums1[k--]=nums2[j--];
         }
     }
-    public static void main(String[] args) {
-        int[] n1 = {9,2,4,0,0,0};
-        int[] n2 = {2,5,6};
 
-        merge(n1, 3, n2, 3);
-        System.out.println("Done");
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3,0,0,0}; int m = 3;
+        int[] nums2 = {2,5,6};          int n = 3;
+        merge(nums1, m, nums2, n);
     }
 }
