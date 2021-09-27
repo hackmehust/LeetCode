@@ -25,7 +25,7 @@ public class _1672_Richest_Customer_Wealth {
         int soCot = a[0].length; //3
         System.out.println("So hang: " + soHang);
         System.out.println("So cot: " + soCot);
-
+        
         System.out.println(maximumWealth(a));
     }
 }

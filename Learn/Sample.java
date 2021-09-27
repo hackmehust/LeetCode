@@ -1,22 +1,23 @@
 package Learn;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Sample {
-    
-    public static int findNumbers(int[] nums) {
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int numberOfDigit = (int) Math.log10(nums[i]) + 1;
-            if (numberOfDigit % 2 == 0) {
-                count++;
-            }
-        }
-        return count;
-    }
+
     public static void main(String[] args) {
-        int nums1[] = {12, 345, 2, 6, 7896};
-        int nums2[] = {555,901,482,1771};
-        System.out.println(findNumbers(nums1));
-        System.out.println(findNumbers(nums2));
+        /* List<Integer> v0 = new ArrayList<>();   comment: shift alt a
+        v0.add(0);
+        v0.add(1);
+        v0.add(2);
+        v0.add(3);
+        v0.add(4);
+        System.out.println(v0.size()); */
+        List<Integer> v1;
+        Integer[] a = {0,1,2,3,4};
+        v1 = new ArrayList<>(Arrays.asList(a));
+        
     }
-    
+
 }
