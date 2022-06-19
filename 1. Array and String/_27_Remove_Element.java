@@ -1,5 +1,3 @@
-package CorrectTask;
-
 /**
  * https://leetcode.com/problems/remove-element/
  */

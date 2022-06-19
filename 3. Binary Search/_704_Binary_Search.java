@@ -1,14 +1,16 @@
-public class MyBinarySearch {
+/*
+ * https://leetcode.com/problems/binary-search/
+ */
 
-    public static int binarySearch(int[] a, int key) {
+public class _704_Binary_Search {
 
+    public static int search(int[] a, int key) {
         int n = a.length;
         int iLeft = 0;
         int iRight = n-1;
 
         while(iLeft <= iRight) {
             int iMid = (iLeft+iRight)/2;
-            System.out.println("[" + iLeft + "," + iRight + "]" + iMid);
             if (key == a[iMid]) {
                 return iMid;
             } else if (key > a[iMid]) {
@@ -20,9 +22,8 @@ public class MyBinarySearch {
 
         return -1;
     }
-
     public static void main(String[] args) {
-        int[] a = {1, 4, 9, 12, 19, 25, 31, 46, 50, 57, 72};
-        System.out.println(binarySearch(a, 31));
+        int[] nums = {1,0,3,5,9,12};
+        System.out.println(search(nums, 9));
     }
 }

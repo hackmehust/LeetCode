@@ -1,5 +1,3 @@
-package CorrectTask;
-
 // https://leetcode.com/problems/merge-sorted-array/
 
 public class _88_Merger_Sorted_Array {

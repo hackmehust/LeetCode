@@ -1,5 +1,3 @@
-package CorrectTask;
-
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 
 public class _1295_Find_Numbers_with_Even_Number {
